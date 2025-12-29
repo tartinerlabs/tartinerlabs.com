@@ -35,7 +35,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-border py-8 text-center text-sm text-muted">
-        <p>Tartiner Labs &bull; Singapore</p>
+        <p>&copy; {new Date().getFullYear()} Tartiner Labs &bull; Singapore</p>
       </footer>
     </div>
   );
