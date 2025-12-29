@@ -1,0 +1,139 @@
+@layer base {
+  [data-theme="tartiner"] {
+    color-scheme: light;
+
+    /* Primitives */
+    --white: oklch(100% 0 0);
+    --black: oklch(0% 0 0);
+    --snow: oklch(0.99 0 0);
+    --eclipse: oklch(0.21 0.006 286);
+
+    /* Layout */
+    --spacing: 0.25rem;
+    --border-width: 1px;
+    --field-border-width: var(--border-width);
+    --disabled-opacity: 0.5;
+    --ring-offset-width: 2px;
+    --cursor-interactive: pointer;
+    --cursor-disabled: not-allowed;
+    --radius: 0.5rem;
+    --field-radius: calc(var(--radius) * 1.5);
+
+    /* Colors */
+    --background: oklch(0.99 0.003 240);
+    --foreground: var(--eclipse);
+    --surface: var(--white);
+    --surface-foreground: var(--foreground);
+    --overlay: var(--white);
+    --overlay-foreground: var(--foreground);
+    --muted: oklch(0.55 0.015 240);
+    --scrollbar: oklch(0.87 0.006 240);
+    --default: oklch(0.94 0.005 240);
+    --default-foreground: var(--eclipse);
+    --accent: oklch(0.55 0.05 240);
+    --accent-foreground: var(--snow);
+    --secondary: oklch(0.5 0.06 280);
+    --secondary-foreground: var(--snow);
+
+    /* Form Field */
+    --field-background: var(--white);
+    --field-foreground: var(--foreground);
+    --field-placeholder: var(--muted);
+    --field-border: oklch(0.9 0.005 240);
+
+    /* Semantic */
+    --success: oklch(0.55 0.1 145);
+    --success-foreground: var(--snow);
+    --warning: oklch(0.65 0.1 55);
+    --warning-foreground: var(--eclipse);
+    --danger: oklch(0.5 0.12 25);
+    --danger-foreground: var(--snow);
+
+    /* Components */
+    --segment: var(--white);
+    --segment-foreground: var(--foreground);
+    --border: oklch(0.9 0.005 240);
+    --separator: oklch(0.92 0.004 240);
+    --focus: var(--accent);
+    --link: var(--accent);
+
+    /* Shadows */
+    --surface-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --overlay-shadow:
+      0 4px 16px 0 rgba(0, 0, 0, 0.08), 0 8px 24px 0 rgba(0, 0, 0, 0.09);
+    --field-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    --skeleton-animation: shimmer;
+  }
+
+  [data-theme="tartiner-dark"] {
+    color-scheme: dark;
+
+    /* Primitives */
+    --white: oklch(100% 0 0);
+    --black: oklch(0% 0 0);
+    --snow: oklch(0.99 0 0);
+    --eclipse: oklch(0.21 0.006 286);
+
+    /* Layout */
+    --spacing: 0.25rem;
+    --border-width: 1px;
+    --field-border-width: var(--border-width);
+    --disabled-opacity: 0.5;
+    --ring-offset-width: 2px;
+    --cursor-interactive: pointer;
+    --cursor-disabled: not-allowed;
+    --radius: 0.5rem;
+    --field-radius: calc(var(--radius) * 1.5);
+
+    /* Colors */
+    --background: oklch(0.12 0.008 240);
+    --foreground: var(--snow);
+    --surface: oklch(0.18 0.006 240);
+    --surface-foreground: var(--foreground);
+    --overlay: oklch(0.2 0.006 240);
+    --overlay-foreground: var(--foreground);
+    --muted: oklch(0.6 0.015 240);
+    --scrollbar: oklch(0.6 0.015 240);
+    --default: oklch(0.25 0.008 240);
+    --default-foreground: var(--snow);
+    --accent: oklch(0.7 0.05 240);
+    --accent-foreground: var(--eclipse);
+    --secondary: oklch(0.65 0.06 280);
+    --secondary-foreground: var(--eclipse);
+
+    /* Form Field */
+    --field-background: var(--default);
+    --field-foreground: var(--foreground);
+    --field-placeholder: var(--muted);
+    --field-border: oklch(0.3 0.008 240);
+
+    /* Semantic */
+    --success: oklch(0.55 0.1 145);
+    --success-foreground: var(--snow);
+    --warning: oklch(0.65 0.1 55);
+    --warning-foreground: var(--eclipse);
+    --danger: oklch(0.5 0.12 25);
+    --danger-foreground: var(--snow);
+
+    /* Components */
+    --segment: var(--surface);
+    --segment-foreground: var(--foreground);
+    --border: oklch(0.28 0.008 240);
+    --separator: oklch(0.25 0.006 240);
+    --focus: var(--accent);
+    --link: var(--accent);
+
+    /* Shadows */
+    --surface-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --overlay-shadow:
+      0 4px 16px 0 rgba(0, 0, 0, 0.3), 0 8px 24px 0 rgba(0, 0, 0, 0.4);
+    --field-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+
+    --skeleton-animation: shimmer;
+  }
+}

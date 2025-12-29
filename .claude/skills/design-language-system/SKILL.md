@@ -7,7 +7,7 @@ description: Tartiner Labs Design Language System (DLS). Use when creating UI co
 
 ## Overview
 
-The Tartiner Labs DLS uses a **Muted** color scheme with low saturation (chroma ~0.05) for a calm, professional aesthetic. Colors are defined in OKLCH color space for perceptual uniformity.
+The Tartiner Labs DLS uses the **Tartiner** theme with low saturation (chroma ~0.05) for a calm, professional aesthetic. Colors are defined in OKLCH color space for perceptual uniformity.
 
 **Brand Philosophy**: "Tartiner" means "to spread" in French — spreading warmth, connection, and clarity across every interface.
 
@@ -40,7 +40,7 @@ For design principles and non-negotiable rules, see [guidelines.md](guidelines.m
 | `--separator` | `oklch(0.92 0.004 240)` | Dividers |
 
 ### Dark Mode Colors
-Dark mode uses `.dark` class on `<html>`. Key differences:
+Dark mode uses `data-theme="tartiner-dark"` on `<html>`. Key differences:
 - Background: `oklch(0.12 0.008 240)` (dark blue-gray)
 - Foreground: `var(--snow)` (light text)
 - Accent: `oklch(0.70 0.05 240)` (brighter for contrast)
@@ -130,6 +130,7 @@ This DLS is built on HeroUI v3 (beta). Use HeroUI components with these variants
 
 ## File Locations
 
-- Theme CSS: `src/app/globals.css`
+- Theme file: `src/themes/tartiner.css`
+- Global CSS: `src/app/globals.css`
 - Preview page: `src/app/preview/page.tsx`
 - Components: `src/components/`

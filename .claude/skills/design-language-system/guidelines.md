@@ -14,12 +14,12 @@ This system prioritises clarity, restraint, correctness, and long-term consisten
 
 ## Theme Definition
 
-Tartiner Labs uses a single, canonical theme: **Muted**.
+Tartiner Labs uses a single, canonical theme: **Tartiner**.
 
-Muted is the default and only approved system appearance.
-All interfaces must assume Muted unless explicitly stated otherwise.
+Tartiner is the default and only approved system appearance.
+All interfaces must assume Tartiner unless explicitly stated otherwise.
 
-### Muted Characteristics
+### Tartiner Characteristics
 
 - Low chroma, cool-toned palette
 - Calm, understated, professional
@@ -29,7 +29,7 @@ All interfaces must assume Muted unless explicitly stated otherwise.
 
 ## Rules (Non-Negotiable)
 
-- Muted is the default. Do not override it casually.
+- Tartiner is the default. Do not override it casually.
 - Do not introduce alternative colour themes or palettes.
 - Dark Mode must reduce chroma before reducing lightness.
 - Semantic colours (success, warning, danger) must remain distinct and unbranded.
@@ -38,7 +38,7 @@ All interfaces must assume Muted unless explicitly stated otherwise.
 
 ## Design Guidance
 
-- If unsure, use Muted.
+- If unsure, use Tartiner.
 - If something feels noisy, reduce chroma, not contrast.
 - Visual hierarchy comes from layout, spacing, and typography, not colour.
 - Colour exists to support comprehension, not personality.
@@ -50,5 +50,5 @@ Colour decisions are considered resolved unless there is a strong, system-wide r
 
 ## Summary
 
-Muted is not a compromise.
+Tartiner is not a compromise.
 It is the equilibrium.

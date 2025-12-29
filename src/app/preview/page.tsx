@@ -10,13 +10,10 @@ export default function PreviewPage() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.setAttribute("data-theme", "light");
-    }
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "tartiner-dark" : "tartiner",
+    );
   }, [isDark]);
 
   return (
@@ -48,7 +45,7 @@ export default function PreviewPage() {
         <section className="mb-12">
           <h2 className="mb-4 text-4xl font-bold">Design Language System</h2>
           <p className="max-w-2xl text-lg text-muted">
-            The Muted theme — calm, understated, and professional. Toggle
+            The Tartiner theme — calm, understated, and professional. Toggle
             between light and dark modes to preview the color palette and
             components.
           </p>
