@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "tartinerlabs_com",
+  "project_id": "7681ac28-ad7e-42df-8f68-0b4d7ef4b737"
+}
