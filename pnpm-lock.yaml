@@ -63,6 +63,9 @@ importers:
       lint-staged:
         specifier: ^16.2.7
         version: 16.2.7
+      portless:
+        specifier: ^0.10.3
+        version: 0.10.3
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -1786,6 +1789,12 @@ packages:
   pidtree@0.6.0:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
+    hasBin: true
+
+  portless@0.10.3:
+    resolution: {integrity: sha512-lXbVUsNiwWMKJGMi49HhTMW0lS7u0EzawonDZQ+yglSnHioiQK18Y4Fe0Ilk+TuXej71E/nTOHIFIBjUGvTm9w==}
+    engines: {node: '>=20'}
+    os: [darwin, linux, win32]
     hasBin: true
 
   postcss@8.4.31:
@@ -4003,6 +4012,8 @@ snapshots:
   picomatch@2.3.1: {}
 
   pidtree@0.6.0: {}
+
+  portless@0.10.3: {}
 
   postcss@8.4.31:
     dependencies:
