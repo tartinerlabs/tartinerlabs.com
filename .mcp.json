@@ -3,14 +3,6 @@
     "heroui-react": {
       "command": "bunx",
       "args": ["-y", "@heroui/react-mcp@latest"]
-    },
-    "next-devtools": {
-      "command": "bunx",
-      "args": ["-y", "next-devtools-mcp@latest"]
-    },
-    "playwright": {
-      "command": "bunx",
-      "args": ["-y", "@playwright/mcp@latest"]
     }
   }
 }
