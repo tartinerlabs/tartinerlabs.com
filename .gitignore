@@ -44,6 +44,11 @@ next-env.d.ts
 .claude
 !.claude/skills
 
+# Agent CLI symlinks (managed by skills-lock.json)
+.crush/
+.goose/
+.kiro/
+
 # Playwright MCP
 .playwright-mcp
 
