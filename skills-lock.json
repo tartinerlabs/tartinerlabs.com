@@ -5,6 +5,11 @@
       "source": "heroui-inc/heroui",
       "sourceType": "github",
       "computedHash": "c9e1bb41fbc3cee782faae08bd465ae05cd685a6ed7cc3392464fdf29b3ab467"
+    },
+    "portless": {
+      "source": "vercel-labs/portless",
+      "sourceType": "github",
+      "computedHash": "b3f30d9b9f2b548d38c795a81c231b56d4f2f1e074b19207cf2a5a3f4d5b9787"
     }
   }
 }
