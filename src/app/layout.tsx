@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Providers } from "@/components/providers";
 import "./globals.css";
+import { PostHogPageView, PostHogProvider } from "@posthog/next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Script from "next/script";
-import type { ReactNode } from "react";
+import { type ReactNode, Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,18 +54,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="tartiner">
-      <head>
-        <Script
-          defer
-          src="https://umami.tartinerlabs.com/script.js"
-          data-website-id="2cd0496e-45d1-403c-8059-d5f3b8837450"
-          data-domains="tartinerlabs.com"
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
-        <Providers>{children}</Providers>
+        <PostHogProvider clientOptions={{ api_host: "/ingest" }}>
+          <Suspense>
+            <PostHogPageView />
+          </Suspense>
+          {children}
+        </PostHogProvider>
+        )
         <Analytics />
         <SpeedInsights />
       </body>
