@@ -9,7 +9,8 @@
     "portless": {
       "source": "vercel-labs/portless",
       "sourceType": "github",
-      "computedHash": "b3f30d9b9f2b548d38c795a81c231b56d4f2f1e074b19207cf2a5a3f4d5b9787"
+      "skillPath": "skills/portless/SKILL.md",
+      "computedHash": "9f948fd3fca141172af0a10605b3fc1bd7ab3d0dbc1ab0f3d7e7e4f5d6e9c3a0"
     }
   }
 }
