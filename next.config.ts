@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     fetches: {
       fullUrl: true,
     },
+    browserToTerminal: "warn",
   },
   typedRoutes: true,
   experimental: {
