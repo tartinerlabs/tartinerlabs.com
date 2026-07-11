@@ -59,3 +59,9 @@ next-env.d.ts
 
 # Agents
 .agents
+.ds-sync/
+ds-bundle/
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules
+.design-sync/tartiner-styles.css

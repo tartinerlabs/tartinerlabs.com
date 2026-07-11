@@ -1,0 +1,21 @@
+{
+  "shape": "package",
+  "pkg": "@heroui/react",
+  "globalName": "TartinerUI",
+  "projectId": "7ea71398-58a1-4267-990e-ac0160ecc2c7",
+  "buildCmd": "node .design-sync/build-css.mjs",
+  "cssEntry": "dist/tartiner-styles.css",
+  "extraFonts": "../../../.design-sync/fonts/fonts.css",
+  "readmeHeader": ".design-sync/conventions.md",
+  "dtsPropsFor": {
+    "Button": "children?: React.ReactNode; variant?: 'primary' | 'secondary' | 'tertiary' | 'outline' | 'ghost' | 'danger' | 'danger-soft'; size?: 'sm' | 'md' | 'lg'; fullWidth?: boolean; isDisabled?: boolean; isIconOnly?: boolean; isPending?: boolean; onPress?: (e: unknown) => void; type?: 'button' | 'submit' | 'reset'; className?: string",
+    "ButtonGroup": "children?: React.ReactNode; variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost' | 'danger'; size?: 'sm' | 'md' | 'lg'; orientation?: 'horizontal' | 'vertical'; isDisabled?: boolean; className?: string",
+    "Chip": "children?: React.ReactNode; color?: 'default' | 'accent' | 'success' | 'warning' | 'danger'; variant?: 'primary' | 'secondary' | 'tertiary' | 'soft'; size?: 'sm' | 'md' | 'lg'; className?: string",
+    "Card": "children?: React.ReactNode; variant?: 'primary' | 'secondary'; className?: string",
+    "TextField": "children?: React.ReactNode; name?: string; type?: string; value?: string; defaultValue?: string; isDisabled?: boolean; isInvalid?: boolean; isRequired?: boolean; isReadOnly?: boolean; onChange?: (value: string) => void; className?: string",
+    "Input": "placeholder?: string; value?: string; defaultValue?: string; type?: string; isDisabled?: boolean; className?: string",
+    "Label": "children?: React.ReactNode; className?: string",
+    "Description": "children?: React.ReactNode; className?: string",
+    "Separator": "orientation?: 'horizontal' | 'vertical'; className?: string"
+  }
+}

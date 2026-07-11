@@ -1,0 +1,18 @@
+/* Geist Sans + Geist Mono (variable) — shipped with the Tartiner Labs DS bundle.
+   Sourced from the `geist` npm package (v1.7.2). The website loads these via
+   next/font/google at runtime; the design bundle ships them as files so every
+   design renders in the brand typeface. */
+@font-face {
+  font-family: "Geist";
+  src: url("./Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("./GeistMono-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
