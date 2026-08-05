@@ -1,5 +1,3 @@
-"use client";
-
 interface ColorSwatchProps {
   name: string;
   cssVar: string;

@@ -6,6 +6,10 @@
       "headers": {
         "x-heroui-personal-token": "${HEROUI_PERSONAL_TOKEN}"
       }
+    },
+    "next-devtools": {
+      "command": "pnx",
+      "args": ["-y", "next-devtools-mcp@latest"]
     }
   }
 }
