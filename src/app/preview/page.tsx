@@ -1,21 +1,9 @@
-"use client";
-
 import { Separator } from "@heroui/react";
-import { useEffect, useState } from "react";
 import { ColorPalette } from "@/components/color-palette";
+import { ThemeModeControls } from "@/components/theme-mode-controls";
 import { ThemePreview } from "@/components/theme-preview";
-import { ThemeSelector } from "@/components/theme-selector";
 
 export default function PreviewPage() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDark ? "tartiner-dark" : "tartiner",
-    );
-  }, [isDark]);
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -55,10 +43,7 @@ export default function PreviewPage() {
 
         {/* Theme Selector */}
         <section className="mb-12">
-          <ThemeSelector
-            isDark={isDark}
-            onDarkModeToggle={() => setIsDark(!isDark)}
-          />
+          <ThemeModeControls />
         </section>
 
         <Separator className="my-8" />
