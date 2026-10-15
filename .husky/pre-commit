@@ -1,2 +1,2 @@
-gitleaks protect --staged --verbose
+gitleaks git --staged --redact --verbose
 pnpm lint-staged
