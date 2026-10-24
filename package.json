@@ -15,7 +15,7 @@
   "dependencies": {
     "@heroui/react": "3.0.0-beta.3",
     "@heroui/styles": "3.0.0-beta.3",
-    "@posthog/next": "0.4.81",
+    "@posthog/next": "0.9.0",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.0.0",
     "motion": "12.40.0",
