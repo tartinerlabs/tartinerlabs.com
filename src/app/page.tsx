@@ -188,7 +188,7 @@ export default function Home() {
             <span>hover to pause</span>
           </div>
           <div className="cursor-default overflow-hidden">
-            <div className="flex w-max animate-[marquee_34s_linear_infinite] hover:[animation-play-state:paused] motion-reduce:animate-none gap-12 whitespace-nowrap text-[length:clamp(72px,11vw,136px)] font-semibold leading-none tracking-[-0.05em]">
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none gap-12 whitespace-nowrap text-[length:clamp(72px,11vw,136px)] font-semibold leading-none tracking-[-0.05em]">
               {[...MARQUEE, ...MARQUEE].map(({ word, outline }, i) => [
                 <span
                   // biome-ignore lint/suspicious/noArrayIndexKey: list is duplicated for the loop
