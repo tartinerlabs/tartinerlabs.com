@@ -53,3 +53,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* View transitions: theme switch and page navigation cross-fade */
+::view-transition-old(.fade),
+::view-transition-new(.fade) {
+  animation-duration: 200ms;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation: none;
+  }
+}

@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { startTransition, useLayoutEffect, useState } from "react";
 import { ThemeSelector } from "@/components/theme-selector";
 
 export function ThemeModeControls() {
   const [isDark, setIsDark] = useState(false);
 
-  useEffect(() => {
+  // Layout effect so the attribute changes inside the view transition's update.
+  useLayoutEffect(() => {
     document.documentElement.setAttribute(
       "data-theme",
       isDark ? "tartiner-dark" : "tartiner",
@@ -16,7 +17,7 @@ export function ThemeModeControls() {
   return (
     <ThemeSelector
       isDark={isDark}
-      onDarkModeToggle={() => setIsDark(!isDark)}
+      onDarkModeToggle={() => startTransition(() => setIsDark(!isDark))}
     />
   );
 }
