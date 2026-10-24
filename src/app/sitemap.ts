@@ -6,5 +6,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://tartinerlabs.com",
       lastModified: new Date(),
     },
+    {
+      url: "https://tartinerlabs.com/privacy",
+      lastModified: new Date(),
+    },
   ];
 }
