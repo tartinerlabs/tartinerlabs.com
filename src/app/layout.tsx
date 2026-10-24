@@ -16,6 +16,21 @@ export const metadata: Metadata = {
   description:
     "A small software company in Singapore building simple, scalable, privacy-focused products that connect people and businesses.",
   metadataBase: new URL("https://tartinerlabs.com"),
+  icons: {
+    icon: [
+      {
+        url: "/icon-light.svg",
+        type: "image/svg+xml",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark.svg",
+        type: "image/svg+xml",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    apple: { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+  },
   openGraph: {
     type: "website",
     locale: "en_SG",
