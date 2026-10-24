@@ -16,7 +16,7 @@
     "@heroui/react": "3.0.0-beta.3",
     "@heroui/styles": "3.0.0-beta.3",
     "@posthog/next": "0.4.81",
-    "@vercel/analytics": "1.6.1",
+    "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "1.3.1",
     "motion": "12.40.0",
     "next": "16.4.3",
