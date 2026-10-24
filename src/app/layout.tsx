@@ -5,19 +5,8 @@ import "./globals.css";
 import { PostHogPageView, PostHogProvider } from "@posthog/next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "next-themes";
 import { type ReactNode, Suspense } from "react";
-
-const themeScript = `(() => {
-  const root = document.documentElement;
-  let dark;
-  try {
-    const stored = localStorage.getItem("tartiner-theme");
-    if (stored) dark = stored === "dark";
-  } catch {}
-  if (dark === undefined) dark = !matchMedia("(prefers-color-scheme: light)").matches;
-  root.dataset.theme = dark ? "tartiner-dark" : "tartiner";
-  if (Element.prototype.animate && !matchMedia("(prefers-reduced-motion: reduce)").matches) root.classList.add("motion");
-})();`;
 
 export const metadata: Metadata = {
   title: {
@@ -60,19 +49,18 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <script
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: sets theme and motion state before first paint
-          dangerouslySetInnerHTML={{ __html: themeScript }}
-        />
-      </head>
       <body className="font-sans antialiased">
-        <PostHogProvider clientOptions={{ api_host: "/ingest" }}>
-          <Suspense>
-            <PostHogPageView />
-          </Suspense>
-          {children}
-        </PostHogProvider>
+        <ThemeProvider
+          storageKey="tartiner-theme"
+          value={{ light: "tartiner", dark: "tartiner-dark" }}
+        >
+          <PostHogProvider clientOptions={{ api_host: "/ingest" }}>
+            <Suspense>
+              <PostHogPageView />
+            </Suspense>
+            {children}
+          </PostHogProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
