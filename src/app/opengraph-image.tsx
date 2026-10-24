@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Tartiner Labs | Quality software, spread across the world.";
+export const alt = "Tartiner Labs | Quality software, spread across the world";
 export const size = {
   width: 1200,
   height: 630,
