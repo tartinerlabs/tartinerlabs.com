@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { type ReactNode, ViewTransition } from "react";
+import type { ReactNode } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
@@ -88,85 +88,83 @@ function Logo({ size }: { size: number }) {
 
 export default function PrivacyPage() {
   return (
-    <ViewTransition default="fade">
-      <div className="flex min-h-screen flex-col bg-background leading-[normal] text-foreground [transition:background_.4s,color_.4s]">
-        <header
-          className={`flex flex-wrap items-center justify-between gap-4 py-6 ${PAD_X}`}
+    <div className="flex min-h-screen flex-col bg-background leading-[normal] text-foreground [transition:background_.4s,color_.4s]">
+      <header
+        className={`flex flex-wrap items-center justify-between gap-4 py-6 ${PAD_X}`}
+      >
+        <Link
+          href="/"
+          className="flex items-center gap-3 text-foreground no-underline"
         >
-          <Link
-            href="/"
-            className="flex items-center gap-3 text-foreground no-underline"
-          >
-            <Logo size={24} />
-            <span className="text-[16px] font-semibold">Tartiner Labs</span>
+          <Logo size={24} />
+          <span className="text-[16px] font-semibold">Tartiner Labs</span>
+        </Link>
+        <nav className="flex flex-wrap items-center gap-x-7 gap-y-3 font-mono text-[12px] tracking-[.06em]">
+          <Link href="/" className={NAV_LINK}>
+            ← /home
           </Link>
-          <nav className="flex flex-wrap items-center gap-x-7 gap-y-3 font-mono text-[12px] tracking-[.06em]">
-            <Link href="/" className={NAV_LINK}>
-              ← /home
-            </Link>
-            <ThemeToggle />
-          </nav>
-        </header>
+          <ThemeToggle />
+        </nav>
+      </header>
 
-        <main
-          className={`flex flex-1 flex-col gap-[clamp(48px,6vw,72px)] pt-[clamp(56px,8vw,96px)] pb-[clamp(72px,10vw,120px)] ${PAD_X}`}
-        >
-          <div className="flex flex-col gap-6">
-            <span className="font-mono text-[13px] text-muted">
-              /privacy · updated 25 Oct 2026
-            </span>
-            <h1 className="m-0 text-[length:clamp(56px,10vw,128px)] font-semibold leading-[.9] tracking-[-0.05em]">
-              Privacy
-            </h1>
-            <p className="m-0 max-w-[640px] text-pretty text-[length:clamp(18px,2vw,22px)] leading-[1.5] text-muted">
-              This site has no accounts, forms or cookies of our own. We use
-              anonymous analytics to see which pages are visited and how fast
-              they load.
-            </p>
-          </div>
-          <div className="flex max-w-[960px] flex-col border-t border-foreground">
-            {SECTIONS.map(({ label, body }) => (
-              <div
-                key={label}
-                className="flex flex-wrap gap-x-12 gap-y-3 border-b border-border py-8"
-              >
-                <span className="flex-[0_0_200px] pt-[3px] font-mono text-[13px] text-accent">
-                  {label}
-                </span>
-                <div className="flex flex-[1_1_400px] flex-col gap-4 text-[17px] leading-[1.6] text-muted">
-                  {body}
-                </div>
-              </div>
-            ))}
-          </div>
-        </main>
-
-        <footer
-          className={`flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-border py-10 text-[14px] text-muted ${PAD_X}`}
-        >
-          <div className="flex items-center gap-3 text-foreground">
-            <Logo size={20} />
-            <span className="text-muted">
-              &copy; {new Date().getFullYear()} Tartiner Labs &bull; Singapore
-            </span>
-          </div>
-          <div className="flex gap-6 font-mono text-[12px]">
-            <a href="https://github.com/tartinerlabs" className={NAV_LINK}>
-              /github ↗
-            </a>
-            <Link
-              href="/privacy"
-              aria-current="page"
-              className="text-foreground no-underline"
+      <main
+        className={`flex flex-1 flex-col gap-[clamp(48px,6vw,72px)] pt-[clamp(56px,8vw,96px)] pb-[clamp(72px,10vw,120px)] ${PAD_X}`}
+      >
+        <div className="flex flex-col gap-6">
+          <span className="font-mono text-[13px] text-muted">
+            /privacy · updated 25 Oct 2026
+          </span>
+          <h1 className="m-0 text-[length:clamp(56px,10vw,128px)] font-semibold leading-[.9] tracking-[-0.05em]">
+            Privacy
+          </h1>
+          <p className="m-0 max-w-[640px] text-pretty text-[length:clamp(18px,2vw,22px)] leading-[1.5] text-muted">
+            This site has no accounts, forms or cookies of our own. We use
+            anonymous analytics to see which pages are visited and how fast they
+            load.
+          </p>
+        </div>
+        <div className="flex max-w-[960px] flex-col border-t border-foreground">
+          {SECTIONS.map(({ label, body }) => (
+            <div
+              key={label}
+              className="flex flex-wrap gap-x-12 gap-y-3 border-b border-border py-8"
             >
-              /privacy
-            </Link>
-            <a href="/llms.txt" className={NAV_LINK}>
-              /llms.txt
-            </a>
-          </div>
-        </footer>
-      </div>
-    </ViewTransition>
+              <span className="flex-[0_0_200px] pt-[3px] font-mono text-[13px] text-accent">
+                {label}
+              </span>
+              <div className="flex flex-[1_1_400px] flex-col gap-4 text-[17px] leading-[1.6] text-muted">
+                {body}
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+
+      <footer
+        className={`flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-border py-10 text-[14px] text-muted ${PAD_X}`}
+      >
+        <div className="flex items-center gap-3 text-foreground">
+          <Logo size={20} />
+          <span className="text-muted">
+            &copy; {new Date().getFullYear()} Tartiner Labs &bull; Singapore
+          </span>
+        </div>
+        <div className="flex gap-6 font-mono text-[12px]">
+          <a href="https://github.com/tartinerlabs" className={NAV_LINK}>
+            /github ↗
+          </a>
+          <Link
+            href="/privacy"
+            aria-current="page"
+            className="text-foreground no-underline"
+          >
+            /privacy
+          </Link>
+          <a href="/llms.txt" className={NAV_LINK}>
+            /llms.txt
+          </a>
+        </div>
+      </footer>
+    </div>
   );
 }
