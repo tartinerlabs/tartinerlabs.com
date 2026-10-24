@@ -228,8 +228,8 @@ importers:
         specifier: runtime:26.8.2
         version: runtime:26.8.2
       portless:
-        specifier: 0.14.0
-        version: 0.14.0
+        specifier: 0.15.10
+        version: 0.15.10
       tailwindcss:
         specifier: 4.3.0
         version: 4.3.0
@@ -2194,8 +2194,8 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
-  portless@0.14.0:
-    resolution: {integrity: sha512-kKxmxB1DQ9gI8t+V13VhuwTXu31io5nbFubvZAE82AxzXBsvcJV7qQJbmomrQUpbVxo2UVHqs14iX4YK0BClmQ==}
+  portless@0.15.10:
+    resolution: {integrity: sha512-/ZAteqCLNP9EFl2bICRge4jttcm9C4/6p70CkdKrfrbNlI3j7bgatBLL370lyJi6LCtMTx6TnanCIqyObFa8Gw==}
     engines: {node: '>=24'}
     os: [darwin, linux, win32]
     hasBin: true
@@ -4452,7 +4452,7 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  portless@0.14.0: {}
+  portless@0.15.10: {}
 
   postcss@8.5.15:
     dependencies:
