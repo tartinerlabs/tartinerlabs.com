@@ -68,3 +68,13 @@ body {
     animation: none;
   }
 }
+
+/* Landing motion: hide animated elements until their entrance animation plays */
+.motion [data-reveal],
+.motion [data-spread] {
+  opacity: 0;
+}
+
+.motion [data-draw] {
+  transform: scaleX(0);
+}
