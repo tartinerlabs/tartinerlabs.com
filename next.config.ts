@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
     browserToTerminal: "warn",
   },
   typedRoutes: true,
+  cacheComponents: true,
+  partialPrefetching: true,
   experimental: {
     mcpServer: true,
     typedEnv: true,

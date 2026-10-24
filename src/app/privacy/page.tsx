@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cacheLife } from "next/cache";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -86,7 +87,10 @@ function Logo({ size }: { size: number }) {
   );
 }
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  "use cache";
+  cacheLife("max");
+
   return (
     <div className="flex min-h-screen flex-col bg-background leading-[normal] text-foreground [transition:background_.4s,color_.4s]">
       <header

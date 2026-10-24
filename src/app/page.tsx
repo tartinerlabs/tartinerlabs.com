@@ -1,5 +1,6 @@
 import { MotionConfig } from "motion/react";
 import * as motion from "motion/react-client";
+import { cacheLife } from "next/cache";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const PAD_X = "px-[clamp(20px,5vw,56px)]";
@@ -62,7 +63,10 @@ function Logo({ size }: { size: number }) {
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  "use cache";
+  cacheLife("max");
+
   return (
     <MotionConfig reducedMotion="user">
       <div className="min-h-screen overflow-hidden bg-background leading-[normal] text-foreground [transition:background_.4s,color_.4s]">
