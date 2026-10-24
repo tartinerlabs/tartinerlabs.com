@@ -1,22 +1,12 @@
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { PostHogPageView, PostHogProvider } from "@posthog/next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "next-themes";
 import { type ReactNode, Suspense } from "react";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -53,17 +43,24 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="tartiner">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
-      >
-        <PostHogProvider clientOptions={{ api_host: "/ingest" }}>
-          <Suspense>
-            <PostHogPageView />
-          </Suspense>
-          {children}
-        </PostHogProvider>
-        )
+    <html
+      lang="en"
+      data-theme="tartiner"
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans antialiased">
+        <ThemeProvider
+          storageKey="tartiner-theme"
+          value={{ light: "tartiner", dark: "tartiner-dark" }}
+        >
+          <PostHogProvider clientOptions={{ api_host: "/ingest" }}>
+            <Suspense>
+              <PostHogPageView />
+            </Suspense>
+            {children}
+          </PostHogProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
