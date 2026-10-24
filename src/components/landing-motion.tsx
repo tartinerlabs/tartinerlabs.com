@@ -24,6 +24,8 @@ export function LandingMotion() {
       { threshold: 0.15 },
     );
 
+    const cleanups: (() => void)[] = [];
+
     const lazy = (
       el: AnimatedElement,
       keyframes: Keyframe[],
@@ -37,6 +39,7 @@ export function LandingMotion() {
       animation.pause();
       animation.currentTime = 0;
       el.__a = animation;
+      cleanups.push(() => animation.cancel());
       io.observe(el);
     };
 
@@ -73,7 +76,6 @@ export function LandingMotion() {
       );
     }
 
-    const cleanups: (() => void)[] = [];
     for (const el of document.querySelectorAll<HTMLElement>("[data-marquee]")) {
       const animation = el.animate(
         [{ transform: "translateX(0)" }, { transform: "translateX(-50%)" }],

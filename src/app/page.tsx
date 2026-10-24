@@ -246,12 +246,12 @@ export default function Home() {
                   </span>
                   <span className="inline-flex items-center gap-2 font-mono text-[12px] text-muted">
                     <span
-                      className={`size-[7px] rounded-full ${status === "Live" ? "bg-success" : "border border-muted"}`}
+                      className={`size-[7px] rounded-full ${status === "Live" ? "bg-success" : "box-content border border-muted"}`}
                     />
                     {status}
                   </span>
                 </span>
-                <span className="ml-auto flex size-12 flex-none items-center justify-center rounded-full border border-border text-[18px]">
+                <span className="ml-auto box-content flex size-12 flex-none items-center justify-center rounded-full border border-border text-[18px]">
                   ↗
                 </span>
               </a>
