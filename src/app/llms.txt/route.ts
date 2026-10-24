@@ -1,18 +1,23 @@
 const content = `# Tartiner Labs
 
-> Building globally distributed software connecting people and businesses. Simple, scalable, privacy-focused solutions from Singapore.
+> Quality software, spread across the world. A small software company in Singapore building simple, scalable, privacy-focused products that connect people and businesses.
 
-## About
+## Origin
 
-Tartiner Labs is a software company based in Singapore that builds globally distributed software solutions. We focus on creating simple, scalable, and privacy-focused applications that connect people and businesses.
+Tartiner (tar·ti·ner, /taʁ.ti.ne/) is French for "to spread". The name started in 2015 as a university project group at the University of Queensland. We meant to turn it into a company after graduation, then went home to our own countries instead. Tartiner Labs, now in Singapore, finishes what that group started.
 
-## Our Story
+## Principles
 
-Tartiner means "to spread" in French. The name began in 2015 as a university project group at the University of Queensland, whose members hoped to build a company around it after graduation. They returned to their own countries and it never happened. Tartiner Labs continues that idea as a software holdings company in Singapore, building quality software that spreads across the world.
+- Clarity over complexity: fewer moving parts. Every screen obvious on first read.
+- Systems over features: foundations that make the next thing easier to build.
+- Long-term thinking: software meant to age quietly, without forced rewrites.
+- Respect for data: privacy-focused by default. We collect only what we need.
 
 ## Website
 
 - Homepage: https://tartinerlabs.com
+- Privacy: https://tartinerlabs.com/privacy
+- GitHub: https://github.com/tartinerlabs
 `;
 
 export function GET() {

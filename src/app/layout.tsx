@@ -10,26 +10,41 @@ import { type ReactNode, Suspense } from "react";
 
 export const metadata: Metadata = {
   title: {
-    default: "Tartiner Labs | Building Software That Connects",
+    default: "Tartiner Labs | Quality software, spread across the world",
     template: "%s | Tartiner Labs",
   },
   description:
-    "Building globally distributed software connecting people and businesses. Simple, scalable, privacy-focused solutions from Singapore.",
+    "A small software company in Singapore building simple, scalable, privacy-focused products that connect people and businesses.",
   metadataBase: new URL("https://tartinerlabs.com"),
+  icons: {
+    icon: [
+      {
+        url: "/icon-light.svg",
+        type: "image/svg+xml",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark.svg",
+        type: "image/svg+xml",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    apple: { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+  },
   openGraph: {
     type: "website",
     locale: "en_SG",
     url: "https://tartinerlabs.com",
     siteName: "Tartiner Labs",
-    title: "Tartiner Labs | Building Software That Connects",
+    title: "Tartiner Labs | Quality software, spread across the world",
     description:
-      "Building globally distributed software connecting people and businesses.",
+      "A small software company in Singapore building simple, scalable, privacy-focused products that connect people and businesses.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tartiner Labs | Building Software That Connects",
+    title: "Tartiner Labs | Quality software, spread across the world",
     description:
-      "Building globally distributed software connecting people and businesses.",
+      "A small software company in Singapore building simple, scalable, privacy-focused products that connect people and businesses.",
   },
   robots: {
     index: true,
