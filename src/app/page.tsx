@@ -48,6 +48,32 @@ export default function Home() {
             software that spreads warmth, connection, and clarity.
           </motion.p>
         </section>
+
+        {/* Story */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mx-auto max-w-2xl border-t border-border py-24"
+        >
+          <h2 className="mb-8 text-3xl font-bold tracking-tight">Our Story</h2>
+          <div className="space-y-6 text-lg leading-relaxed text-muted">
+            <p>
+              Tartiner started in 2015 as the name of a university project group
+              at the University of Queensland. A few of us wanted to build a
+              company around it after graduation, but we each went home to our
+              own countries, and it never happened.
+            </p>
+            <p>
+              Tartiner Labs continues that idea, now based in Singapore, with
+              one goal: build quality software and spread it across the world.
+            </p>
+            <p className="text-foreground">
+              Ambitious? Yes. That is the challenge.
+            </p>
+          </div>
+        </motion.section>
       </main>
 
       {/* Footer */}
