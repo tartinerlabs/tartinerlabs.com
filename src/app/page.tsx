@@ -43,9 +43,14 @@ const PRINCIPLES = [
 ];
 
 const PRODUCTS = [
-  { name: "Product name", status: "Live" },
-  { name: "Product name", status: "In development" },
-  { name: "Product name", status: "In development" },
+  {
+    name: "Trace",
+    description:
+      "Private location timeline for iPhone. Your places and routes stay on your device.",
+    href: "https://usetrace.app/",
+    status: "Live · iOS",
+    live: true,
+  },
 ];
 
 function Logo({ size }: { size: number }) {
@@ -241,16 +246,22 @@ export default async function Home() {
         >
           <div className="flex justify-between font-mono text-[13px] text-muted">
             <span>/work</span>
-            <span>placeholders</span>
+            <span>
+              {String(PRODUCTS.filter(({ live }) => live).length).padStart(
+                2,
+                "0",
+              )}{" "}
+              live
+            </span>
           </div>
           <div className="flex flex-col border-t border-foreground">
-            {PRODUCTS.map(({ name, status }, i) => (
+            {PRODUCTS.map(({ name, description, href, status, live }, i) => (
               <motion.a
-                // biome-ignore lint/suspicious/noArrayIndexKey: placeholder rows share a name
-                key={i}
+                key={name}
                 {...reveal(i * 0.1)}
-                // biome-ignore lint/a11y/useValidAnchor: placeholder until products have URLs
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener"
                 className="flex flex-wrap items-center gap-x-6 gap-y-4 border-b border-border py-9 text-foreground no-underline [transition:color_.25s,padding_.4s_cubic-bezier(.16,1,.3,1)] hover:pl-5 hover:text-accent"
               >
                 <span className="flex-[0_0_clamp(32px,6vw,80px)] font-mono text-[14px] text-muted">
@@ -261,11 +272,11 @@ export default async function Home() {
                 </span>
                 <span className="flex flex-[0_1_340px] flex-col gap-[10px]">
                   <span className="text-[16px] leading-[1.45] text-muted">
-                    One-line description of the product.
+                    {description}
                   </span>
                   <span className="inline-flex items-center gap-2 font-mono text-[12px] text-muted">
                     <span
-                      className={`size-[7px] rounded-full ${status === "Live" ? "bg-success" : "box-content border border-muted"}`}
+                      className={`size-[7px] rounded-full ${live ? "bg-success" : "box-content border border-muted"}`}
                     />
                     {status}
                   </span>

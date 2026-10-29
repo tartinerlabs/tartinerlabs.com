@@ -13,6 +13,10 @@ Tartiner (tar·ti·ner, /taʁ.ti.ne/) is French for "to spread". The name starte
 - Long-term thinking: software meant to age quietly, without forced rewrites.
 - Respect for data: privacy-focused by default. We collect only what we need.
 
+## Products
+
+- Trace: private location timeline for iPhone. Your places and routes stay on your device. https://usetrace.app/
+
 ## Website
 
 - Homepage: https://tartinerlabs.com
