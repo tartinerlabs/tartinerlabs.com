@@ -6,6 +6,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Privacy",
+  alternates: { canonical: "/privacy" },
   description:
     "This site has no accounts, forms or cookies of our own. We use anonymous analytics to see which pages are visited and how fast they load.",
 };

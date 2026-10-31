@@ -1,7 +1,28 @@
 import { MotionConfig } from "motion/react";
 import * as motion from "motion/react-client";
+import type { Metadata } from "next";
 import { cacheLife } from "next/cache";
 import { ThemeToggle } from "@/components/theme-toggle";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Tartiner Labs",
+  url: "https://tartinerlabs.com",
+  logo: "https://tartinerlabs.com/apple-icon.png",
+  description:
+    "A small software company in Singapore building simple, scalable, privacy-focused products that connect people and businesses.",
+  sameAs: ["https://github.com/tartinerlabs"],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Singapore",
+    addressCountry: "SG",
+  },
+};
 
 const PAD_X = "px-[clamp(20px,5vw,56px)]";
 const NAV_LINK = "text-muted no-underline hover:text-foreground";
@@ -74,6 +95,13 @@ export default async function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD, escaped per Next.js guide
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(JSON_LD).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="min-h-screen overflow-hidden bg-background leading-[normal] text-foreground [transition:background_.4s,color_.4s]">
         <header
           className={`flex flex-wrap items-center justify-between gap-4 py-6 ${PAD_X}`}
